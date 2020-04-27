@@ -10,6 +10,6 @@
   "repo": "googleapis/java-bigqueryconnections",
   "repo_short": "java-bigqueryconnections",
   "distribution_name": "com.google.cloud:google-cloud-bigqueryconnections",
-  "api_id": "bigqueryconnections.googleapis.com",
+  "api_id": "bigqueryconnection.googleapis.com",
   "requires_billing": true
 }
