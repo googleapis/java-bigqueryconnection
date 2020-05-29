@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "git@github.com:stephaniewang526/java-bigqueryconnection.git",
-        "sha": "760f92c1b6406569b08f2b9df6eabd1f220133e9"
+        "sha": "51741de087d29a3b272f0f74548eaf0633ca7d17"
       }
     },
     {
@@ -27,7 +27,7 @@
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "4e1d2cb79b02d7496b1452f91c518630c207145e"
+        "sha": "385d537832113984af2d033aaf353f0432256527"
       }
     }
   ],

@@ -27,6 +27,7 @@ for version in versions:
       version=version,
       proto_path=f'google/cloud/bigquery/connection/{version}',
       bazel_target=f'//google/cloud/bigquery/connection/{version}:google-cloud-{service}-{version}-java',
+      destination_name='bigqueryconnection',
   )
 
 java.common_templates()
