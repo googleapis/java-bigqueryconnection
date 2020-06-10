@@ -25,15 +25,15 @@ import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.api.resourcenames.ResourceName;
-import com.google.cloud.bigquery.connection.v1.Connection;
 import com.google.cloud.bigquery.connection.v1.ConnectionName;
-import com.google.cloud.bigquery.connection.v1.CreateConnectionRequest;
-import com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest;
-import com.google.cloud.bigquery.connection.v1.GetConnectionRequest;
-import com.google.cloud.bigquery.connection.v1.ListConnectionsRequest;
-import com.google.cloud.bigquery.connection.v1.ListConnectionsResponse;
+import com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection;
+import com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest;
+import com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest;
+import com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest;
+import com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest;
+import com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsResponse;
+import com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest;
 import com.google.cloud.bigquery.connection.v1.LocationName;
-import com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest;
 import com.google.common.collect.Lists;
 import com.google.iam.v1.GetIamPolicyRequest;
 import com.google.iam.v1.GetPolicyOptions;
@@ -222,14 +222,8 @@ public class ConnectionServiceClientTest {
     mockConnectionService.addResponse(expectedResponse);
 
     LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
-    int pageSize = 883849137;
-    ListConnectionsRequest request =
-        ListConnectionsRequest.newBuilder()
-            .setParent(parent.toString())
-            .setPageSize(pageSize)
-            .build();
 
-    ListConnectionsPagedResponse pagedListResponse = client.listConnections(request);
+    ListConnectionsPagedResponse pagedListResponse = client.listConnections(parent);
 
     List<Connection> resources = Lists.newArrayList(pagedListResponse.iterateAll());
     Assert.assertEquals(1, resources.size());
@@ -240,7 +234,6 @@ public class ConnectionServiceClientTest {
     ListConnectionsRequest actualRequest = (ListConnectionsRequest) actualRequests.get(0);
 
     Assert.assertEquals(parent, LocationName.parse(actualRequest.getParent()));
-    Assert.assertEquals(pageSize, actualRequest.getPageSize());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -255,14 +248,8 @@ public class ConnectionServiceClientTest {
 
     try {
       LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
-      int pageSize = 883849137;
-      ListConnectionsRequest request =
-          ListConnectionsRequest.newBuilder()
-              .setParent(parent.toString())
-              .setPageSize(pageSize)
-              .build();
 
-      client.listConnections(request);
+      client.listConnections(parent);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception
