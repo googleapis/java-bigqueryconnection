@@ -36,13 +36,18 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  <!-- [END bigqueryconnection_install_with_bom] -->
 
+  <!-- We cannot pull beta clients from libraries-bom, specify as below for now -->
+  <!-- [START bigqueryconnection_install_without_bom] -->
   <dependencies>
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-bigqueryconnection</artifactId>
+      <!-- TODO: REMOVE VERSION SPECIFIED BELOW WHEN THE CLIENT GOES GA-->
+      <version>0.1.0</version>
     </dependency>
-    <!-- [END bigqueryconnection_install_with_bom] -->
+  <!-- [END bigqueryconnection_install_without_bom] -->
 
     <dependency>
       <groupId>junit</groupId>
