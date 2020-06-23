@@ -16,14 +16,14 @@
 package com.google.cloud.bigqueryconnection.v1;
 
 import com.google.api.core.BetaApi;
-import com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection;
-import com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest;
-import com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest;
-import com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest;
-import com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest;
-import com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsResponse;
-import com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest;
+import com.google.cloud.bigquery.connection.v1.Connection;
 import com.google.cloud.bigquery.connection.v1.ConnectionServiceGrpc.ConnectionServiceImplBase;
+import com.google.cloud.bigquery.connection.v1.CreateConnectionRequest;
+import com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest;
+import com.google.cloud.bigquery.connection.v1.GetConnectionRequest;
+import com.google.cloud.bigquery.connection.v1.ListConnectionsRequest;
+import com.google.cloud.bigquery.connection.v1.ListConnectionsResponse;
+import com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest;
 import com.google.iam.v1.GetIamPolicyRequest;
 import com.google.iam.v1.Policy;
 import com.google.iam.v1.SetIamPolicyRequest;

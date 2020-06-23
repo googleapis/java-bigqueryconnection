@@ -40,23 +40,22 @@ public final class ConnectionServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest,
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+          com.google.cloud.bigquery.connection.v1.CreateConnectionRequest,
+          com.google.cloud.bigquery.connection.v1.Connection>
       getCreateConnectionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreateConnection",
-      requestType =
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest.class,
-      responseType = com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection.class,
+      requestType = com.google.cloud.bigquery.connection.v1.CreateConnectionRequest.class,
+      responseType = com.google.cloud.bigquery.connection.v1.Connection.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest,
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+          com.google.cloud.bigquery.connection.v1.CreateConnectionRequest,
+          com.google.cloud.bigquery.connection.v1.Connection>
       getCreateConnectionMethod() {
     io.grpc.MethodDescriptor<
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest,
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+            com.google.cloud.bigquery.connection.v1.CreateConnectionRequest,
+            com.google.cloud.bigquery.connection.v1.Connection>
         getCreateConnectionMethod;
     if ((getCreateConnectionMethod = ConnectionServiceGrpc.getCreateConnectionMethod) == null) {
       synchronized (ConnectionServiceGrpc.class) {
@@ -64,20 +63,19 @@ public final class ConnectionServiceGrpc {
           ConnectionServiceGrpc.getCreateConnectionMethod =
               getCreateConnectionMethod =
                   io.grpc.MethodDescriptor
-                      .<com.google.cloud.bigquery.connection.v1.ConnectionProto
-                              .CreateConnectionRequest,
-                          com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+                      .<com.google.cloud.bigquery.connection.v1.CreateConnectionRequest,
+                          com.google.cloud.bigquery.connection.v1.Connection>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
                       .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateConnection"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.google.cloud.bigquery.connection.v1.ConnectionProto
-                                  .CreateConnectionRequest.getDefaultInstance()))
+                              com.google.cloud.bigquery.connection.v1.CreateConnectionRequest
+                                  .getDefaultInstance()))
                       .setResponseMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection
+                              com.google.cloud.bigquery.connection.v1.Connection
                                   .getDefaultInstance()))
                       .setSchemaDescriptor(
                           new ConnectionServiceMethodDescriptorSupplier("CreateConnection"))
@@ -89,23 +87,22 @@ public final class ConnectionServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest,
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+          com.google.cloud.bigquery.connection.v1.GetConnectionRequest,
+          com.google.cloud.bigquery.connection.v1.Connection>
       getGetConnectionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetConnection",
-      requestType =
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest.class,
-      responseType = com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection.class,
+      requestType = com.google.cloud.bigquery.connection.v1.GetConnectionRequest.class,
+      responseType = com.google.cloud.bigquery.connection.v1.Connection.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest,
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+          com.google.cloud.bigquery.connection.v1.GetConnectionRequest,
+          com.google.cloud.bigquery.connection.v1.Connection>
       getGetConnectionMethod() {
     io.grpc.MethodDescriptor<
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest,
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+            com.google.cloud.bigquery.connection.v1.GetConnectionRequest,
+            com.google.cloud.bigquery.connection.v1.Connection>
         getGetConnectionMethod;
     if ((getGetConnectionMethod = ConnectionServiceGrpc.getGetConnectionMethod) == null) {
       synchronized (ConnectionServiceGrpc.class) {
@@ -113,20 +110,19 @@ public final class ConnectionServiceGrpc {
           ConnectionServiceGrpc.getGetConnectionMethod =
               getGetConnectionMethod =
                   io.grpc.MethodDescriptor
-                      .<com.google.cloud.bigquery.connection.v1.ConnectionProto
-                              .GetConnectionRequest,
-                          com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+                      .<com.google.cloud.bigquery.connection.v1.GetConnectionRequest,
+                          com.google.cloud.bigquery.connection.v1.Connection>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
                       .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConnection"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.google.cloud.bigquery.connection.v1.ConnectionProto
-                                  .GetConnectionRequest.getDefaultInstance()))
+                              com.google.cloud.bigquery.connection.v1.GetConnectionRequest
+                                  .getDefaultInstance()))
                       .setResponseMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection
+                              com.google.cloud.bigquery.connection.v1.Connection
                                   .getDefaultInstance()))
                       .setSchemaDescriptor(
                           new ConnectionServiceMethodDescriptorSupplier("GetConnection"))
@@ -138,24 +134,22 @@ public final class ConnectionServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest,
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsResponse>
+          com.google.cloud.bigquery.connection.v1.ListConnectionsRequest,
+          com.google.cloud.bigquery.connection.v1.ListConnectionsResponse>
       getListConnectionsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ListConnections",
-      requestType =
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest.class,
-      responseType =
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsResponse.class,
+      requestType = com.google.cloud.bigquery.connection.v1.ListConnectionsRequest.class,
+      responseType = com.google.cloud.bigquery.connection.v1.ListConnectionsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest,
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsResponse>
+          com.google.cloud.bigquery.connection.v1.ListConnectionsRequest,
+          com.google.cloud.bigquery.connection.v1.ListConnectionsResponse>
       getListConnectionsMethod() {
     io.grpc.MethodDescriptor<
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest,
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsResponse>
+            com.google.cloud.bigquery.connection.v1.ListConnectionsRequest,
+            com.google.cloud.bigquery.connection.v1.ListConnectionsResponse>
         getListConnectionsMethod;
     if ((getListConnectionsMethod = ConnectionServiceGrpc.getListConnectionsMethod) == null) {
       synchronized (ConnectionServiceGrpc.class) {
@@ -163,22 +157,20 @@ public final class ConnectionServiceGrpc {
           ConnectionServiceGrpc.getListConnectionsMethod =
               getListConnectionsMethod =
                   io.grpc.MethodDescriptor
-                      .<com.google.cloud.bigquery.connection.v1.ConnectionProto
-                              .ListConnectionsRequest,
-                          com.google.cloud.bigquery.connection.v1.ConnectionProto
-                              .ListConnectionsResponse>
+                      .<com.google.cloud.bigquery.connection.v1.ListConnectionsRequest,
+                          com.google.cloud.bigquery.connection.v1.ListConnectionsResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
                       .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListConnections"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.google.cloud.bigquery.connection.v1.ConnectionProto
-                                  .ListConnectionsRequest.getDefaultInstance()))
+                              com.google.cloud.bigquery.connection.v1.ListConnectionsRequest
+                                  .getDefaultInstance()))
                       .setResponseMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.google.cloud.bigquery.connection.v1.ConnectionProto
-                                  .ListConnectionsResponse.getDefaultInstance()))
+                              com.google.cloud.bigquery.connection.v1.ListConnectionsResponse
+                                  .getDefaultInstance()))
                       .setSchemaDescriptor(
                           new ConnectionServiceMethodDescriptorSupplier("ListConnections"))
                       .build();
@@ -189,23 +181,22 @@ public final class ConnectionServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest,
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+          com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest,
+          com.google.cloud.bigquery.connection.v1.Connection>
       getUpdateConnectionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "UpdateConnection",
-      requestType =
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest.class,
-      responseType = com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection.class,
+      requestType = com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest.class,
+      responseType = com.google.cloud.bigquery.connection.v1.Connection.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest,
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+          com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest,
+          com.google.cloud.bigquery.connection.v1.Connection>
       getUpdateConnectionMethod() {
     io.grpc.MethodDescriptor<
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest,
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+            com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest,
+            com.google.cloud.bigquery.connection.v1.Connection>
         getUpdateConnectionMethod;
     if ((getUpdateConnectionMethod = ConnectionServiceGrpc.getUpdateConnectionMethod) == null) {
       synchronized (ConnectionServiceGrpc.class) {
@@ -213,20 +204,19 @@ public final class ConnectionServiceGrpc {
           ConnectionServiceGrpc.getUpdateConnectionMethod =
               getUpdateConnectionMethod =
                   io.grpc.MethodDescriptor
-                      .<com.google.cloud.bigquery.connection.v1.ConnectionProto
-                              .UpdateConnectionRequest,
-                          com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+                      .<com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest,
+                          com.google.cloud.bigquery.connection.v1.Connection>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
                       .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateConnection"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.google.cloud.bigquery.connection.v1.ConnectionProto
-                                  .UpdateConnectionRequest.getDefaultInstance()))
+                              com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest
+                                  .getDefaultInstance()))
                       .setResponseMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection
+                              com.google.cloud.bigquery.connection.v1.Connection
                                   .getDefaultInstance()))
                       .setSchemaDescriptor(
                           new ConnectionServiceMethodDescriptorSupplier("UpdateConnection"))
@@ -238,22 +228,21 @@ public final class ConnectionServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest,
+          com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest,
           com.google.protobuf.Empty>
       getDeleteConnectionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "DeleteConnection",
-      requestType =
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest.class,
+      requestType = com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest.class,
       responseType = com.google.protobuf.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<
-          com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest,
+          com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest,
           com.google.protobuf.Empty>
       getDeleteConnectionMethod() {
     io.grpc.MethodDescriptor<
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest,
+            com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest,
             com.google.protobuf.Empty>
         getDeleteConnectionMethod;
     if ((getDeleteConnectionMethod = ConnectionServiceGrpc.getDeleteConnectionMethod) == null) {
@@ -262,8 +251,7 @@ public final class ConnectionServiceGrpc {
           ConnectionServiceGrpc.getDeleteConnectionMethod =
               getDeleteConnectionMethod =
                   io.grpc.MethodDescriptor
-                      .<com.google.cloud.bigquery.connection.v1.ConnectionProto
-                              .DeleteConnectionRequest,
+                      .<com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest,
                           com.google.protobuf.Empty>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
@@ -271,8 +259,8 @@ public final class ConnectionServiceGrpc {
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.google.cloud.bigquery.connection.v1.ConnectionProto
-                                  .DeleteConnectionRequest.getDefaultInstance()))
+                              com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest
+                                  .getDefaultInstance()))
                       .setResponseMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
                               com.google.protobuf.Empty.getDefaultInstance()))
@@ -465,9 +453,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public void createConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest request,
-        io.grpc.stub.StreamObserver<
-                com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+        com.google.cloud.bigquery.connection.v1.CreateConnectionRequest request,
+        io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.Connection>
             responseObserver) {
       asyncUnimplementedUnaryCall(getCreateConnectionMethod(), responseObserver);
     }
@@ -480,9 +467,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public void getConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest request,
-        io.grpc.stub.StreamObserver<
-                com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+        com.google.cloud.bigquery.connection.v1.GetConnectionRequest request,
+        io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.Connection>
             responseObserver) {
       asyncUnimplementedUnaryCall(getGetConnectionMethod(), responseObserver);
     }
@@ -495,9 +481,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public void listConnections(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest request,
-        io.grpc.stub.StreamObserver<
-                com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsResponse>
+        com.google.cloud.bigquery.connection.v1.ListConnectionsRequest request,
+        io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.ListConnectionsResponse>
             responseObserver) {
       asyncUnimplementedUnaryCall(getListConnectionsMethod(), responseObserver);
     }
@@ -511,9 +496,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public void updateConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest request,
-        io.grpc.stub.StreamObserver<
-                com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+        com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest request,
+        io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.Connection>
             responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateConnectionMethod(), responseObserver);
     }
@@ -526,7 +510,7 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public void deleteConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest request,
+        com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteConnectionMethod(), responseObserver);
     }
@@ -587,39 +571,35 @@ public final class ConnectionServiceGrpc {
               getCreateConnectionMethod(),
               asyncUnaryCall(
                   new MethodHandlers<
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto
-                          .CreateConnectionRequest,
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>(
+                      com.google.cloud.bigquery.connection.v1.CreateConnectionRequest,
+                      com.google.cloud.bigquery.connection.v1.Connection>(
                       this, METHODID_CREATE_CONNECTION)))
           .addMethod(
               getGetConnectionMethod(),
               asyncUnaryCall(
                   new MethodHandlers<
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest,
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>(
+                      com.google.cloud.bigquery.connection.v1.GetConnectionRequest,
+                      com.google.cloud.bigquery.connection.v1.Connection>(
                       this, METHODID_GET_CONNECTION)))
           .addMethod(
               getListConnectionsMethod(),
               asyncUnaryCall(
                   new MethodHandlers<
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto
-                          .ListConnectionsRequest,
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto
-                          .ListConnectionsResponse>(this, METHODID_LIST_CONNECTIONS)))
+                      com.google.cloud.bigquery.connection.v1.ListConnectionsRequest,
+                      com.google.cloud.bigquery.connection.v1.ListConnectionsResponse>(
+                      this, METHODID_LIST_CONNECTIONS)))
           .addMethod(
               getUpdateConnectionMethod(),
               asyncUnaryCall(
                   new MethodHandlers<
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto
-                          .UpdateConnectionRequest,
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>(
+                      com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest,
+                      com.google.cloud.bigquery.connection.v1.Connection>(
                       this, METHODID_UPDATE_CONNECTION)))
           .addMethod(
               getDeleteConnectionMethod(),
               asyncUnaryCall(
                   new MethodHandlers<
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto
-                          .DeleteConnectionRequest,
+                      com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest,
                       com.google.protobuf.Empty>(this, METHODID_DELETE_CONNECTION)))
           .addMethod(
               getGetIamPolicyMethod(),
@@ -671,9 +651,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public void createConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest request,
-        io.grpc.stub.StreamObserver<
-                com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+        com.google.cloud.bigquery.connection.v1.CreateConnectionRequest request,
+        io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.Connection>
             responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateConnectionMethod(), getCallOptions()),
@@ -689,9 +668,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public void getConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest request,
-        io.grpc.stub.StreamObserver<
-                com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+        com.google.cloud.bigquery.connection.v1.GetConnectionRequest request,
+        io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.Connection>
             responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetConnectionMethod(), getCallOptions()),
@@ -707,9 +685,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public void listConnections(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest request,
-        io.grpc.stub.StreamObserver<
-                com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsResponse>
+        com.google.cloud.bigquery.connection.v1.ListConnectionsRequest request,
+        io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.ListConnectionsResponse>
             responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListConnectionsMethod(), getCallOptions()),
@@ -726,9 +703,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public void updateConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest request,
-        io.grpc.stub.StreamObserver<
-                com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
+        com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest request,
+        io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.Connection>
             responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getUpdateConnectionMethod(), getCallOptions()),
@@ -744,7 +720,7 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public void deleteConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest request,
+        com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeleteConnectionMethod(), getCallOptions()),
@@ -838,8 +814,8 @@ public final class ConnectionServiceGrpc {
      * Creates a new connection.
      * </pre>
      */
-    public com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection createConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest request) {
+    public com.google.cloud.bigquery.connection.v1.Connection createConnection(
+        com.google.cloud.bigquery.connection.v1.CreateConnectionRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateConnectionMethod(), getCallOptions(), request);
     }
@@ -851,8 +827,8 @@ public final class ConnectionServiceGrpc {
      * Returns specified connection.
      * </pre>
      */
-    public com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection getConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest request) {
+    public com.google.cloud.bigquery.connection.v1.Connection getConnection(
+        com.google.cloud.bigquery.connection.v1.GetConnectionRequest request) {
       return blockingUnaryCall(getChannel(), getGetConnectionMethod(), getCallOptions(), request);
     }
 
@@ -863,10 +839,8 @@ public final class ConnectionServiceGrpc {
      * Returns a list of connections in the given project.
      * </pre>
      */
-    public com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsResponse
-        listConnections(
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest
-                request) {
+    public com.google.cloud.bigquery.connection.v1.ListConnectionsResponse listConnections(
+        com.google.cloud.bigquery.connection.v1.ListConnectionsRequest request) {
       return blockingUnaryCall(getChannel(), getListConnectionsMethod(), getCallOptions(), request);
     }
 
@@ -878,8 +852,8 @@ public final class ConnectionServiceGrpc {
      * credential if connection properties are in the update field mask.
      * </pre>
      */
-    public com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection updateConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest request) {
+    public com.google.cloud.bigquery.connection.v1.Connection updateConnection(
+        com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateConnectionMethod(), getCallOptions(), request);
     }
@@ -892,7 +866,7 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty deleteConnection(
-        com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest request) {
+        com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteConnectionMethod(), getCallOptions(), request);
     }
@@ -969,10 +943,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
-        createConnection(
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest
-                request) {
+            com.google.cloud.bigquery.connection.v1.Connection>
+        createConnection(com.google.cloud.bigquery.connection.v1.CreateConnectionRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateConnectionMethod(), getCallOptions()), request);
     }
@@ -985,9 +957,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
-        getConnection(
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest request) {
+            com.google.cloud.bigquery.connection.v1.Connection>
+        getConnection(com.google.cloud.bigquery.connection.v1.GetConnectionRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetConnectionMethod(), getCallOptions()), request);
     }
@@ -1000,10 +971,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsResponse>
-        listConnections(
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest
-                request) {
+            com.google.cloud.bigquery.connection.v1.ListConnectionsResponse>
+        listConnections(com.google.cloud.bigquery.connection.v1.ListConnectionsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getListConnectionsMethod(), getCallOptions()), request);
     }
@@ -1017,10 +986,8 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>
-        updateConnection(
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest
-                request) {
+            com.google.cloud.bigquery.connection.v1.Connection>
+        updateConnection(com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateConnectionMethod(), getCallOptions()), request);
     }
@@ -1033,9 +1000,7 @@ public final class ConnectionServiceGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
-        deleteConnection(
-            com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest
-                request) {
+        deleteConnection(com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteConnectionMethod(), getCallOptions()), request);
     }
@@ -1118,41 +1083,32 @@ public final class ConnectionServiceGrpc {
       switch (methodId) {
         case METHODID_CREATE_CONNECTION:
           serviceImpl.createConnection(
-              (com.google.cloud.bigquery.connection.v1.ConnectionProto.CreateConnectionRequest)
-                  request,
-              (io.grpc.stub.StreamObserver<
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>)
+              (com.google.cloud.bigquery.connection.v1.CreateConnectionRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.Connection>)
                   responseObserver);
           break;
         case METHODID_GET_CONNECTION:
           serviceImpl.getConnection(
-              (com.google.cloud.bigquery.connection.v1.ConnectionProto.GetConnectionRequest)
-                  request,
-              (io.grpc.stub.StreamObserver<
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>)
+              (com.google.cloud.bigquery.connection.v1.GetConnectionRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.Connection>)
                   responseObserver);
           break;
         case METHODID_LIST_CONNECTIONS:
           serviceImpl.listConnections(
-              (com.google.cloud.bigquery.connection.v1.ConnectionProto.ListConnectionsRequest)
-                  request,
+              (com.google.cloud.bigquery.connection.v1.ListConnectionsRequest) request,
               (io.grpc.stub.StreamObserver<
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto
-                          .ListConnectionsResponse>)
+                      com.google.cloud.bigquery.connection.v1.ListConnectionsResponse>)
                   responseObserver);
           break;
         case METHODID_UPDATE_CONNECTION:
           serviceImpl.updateConnection(
-              (com.google.cloud.bigquery.connection.v1.ConnectionProto.UpdateConnectionRequest)
-                  request,
-              (io.grpc.stub.StreamObserver<
-                      com.google.cloud.bigquery.connection.v1.ConnectionProto.Connection>)
+              (com.google.cloud.bigquery.connection.v1.UpdateConnectionRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.cloud.bigquery.connection.v1.Connection>)
                   responseObserver);
           break;
         case METHODID_DELETE_CONNECTION:
           serviceImpl.deleteConnection(
-              (com.google.cloud.bigquery.connection.v1.ConnectionProto.DeleteConnectionRequest)
-                  request,
+              (com.google.cloud.bigquery.connection.v1.DeleteConnectionRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         case METHODID_GET_IAM_POLICY:
@@ -1194,7 +1150,7 @@ public final class ConnectionServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.google.cloud.bigquery.connection.v1.ConnectionProto.getDescriptor();
+      return com.google.cloud.bigquery.connection.v1.ConnectionOuterClass.getDescriptor();
     }
 
     @java.lang.Override
