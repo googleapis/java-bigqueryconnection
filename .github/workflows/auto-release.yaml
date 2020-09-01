@@ -15,7 +15,7 @@ jobs:
           }
 
           // only approve PRs from release-please
-          if ( !context.payload.sender.login.includes("release-please") ) {
+          if ( !context.payload.sender.organizations_url.includes("googleapis") ) {
             return;
           }
 
