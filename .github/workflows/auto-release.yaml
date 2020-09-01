@@ -15,7 +15,13 @@ jobs:
             return;
           }
 
-          console.log(context.payload.sender.login);
+          console.log(context.payload.pull_request.author.login);
+          return;
+
+          // only approve PRs from release-please
+          if ( !context.payload.sender.login.includes("google") ) {
+            return;
+          }
 
           // approve release PR
           await github.pulls.createReview({
