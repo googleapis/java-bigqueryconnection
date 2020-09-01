@@ -44,9 +44,7 @@ jobs:
           if ( pulls !== 'undefined' ) {
             // return if there are open depedency update PRs
             for (const pull of pulls) {
-              echo ( JSON.stringify(pull) );
               if (pull.title.startsWith("deps: update dependency ")) {
-                echo "No open dependency update pull requests in this repo";
                 return;
               }
             }
