@@ -34,7 +34,7 @@ jobs:
           }
 
           // list all open pull requests
-          const promise = github.pulls.list({
+          const promise = github.pulls.list.endpoint({
             owner: context.repo.owner,
             repo: context.repo.repo,
             state: 'open'
