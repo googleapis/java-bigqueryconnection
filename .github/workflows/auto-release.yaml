@@ -33,16 +33,22 @@ jobs:
             return;
           }
 
-          // list all open pull requests
           const promise = github.pulls.list.endpoint({
             owner: context.repo.owner,
             repo: context.repo.repo,
             state: 'open'
           });
           const open_pulls = await github.paginate(promise)
-          console.log("paginated pulls: " + JSON. stringify(open_pulls));
-          return;
+          console.log("paginated pulls: " + JSON.stringify(open_pulls));
 
+          if ( open_pulls.length > 1 ) {
+            for ( const pull of open_pulls ) {
+              console.log("pull title: " + pull.title);
+              if ( pull.title.startsWith("deps: update dependency") ) return;
+            }
+          }
+
+          return; // do nothing
 
           // approve release PR
           await github.pulls.createReview({
