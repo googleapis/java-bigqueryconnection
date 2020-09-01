@@ -29,7 +29,7 @@ jobs:
             context.payload.pull_request.body.includes("BREAKING CHANGES") ||
             context.payload.pull_request.body.includes("Features")
           ) {
-            console.log( "Not autoreleasing since it is not a dependency-update-only release. " );
+            console.log( "Not auto-releasing since it is not a dependency-update-only release." );
             return;
           }
 
@@ -39,16 +39,15 @@ jobs:
             state: 'open'
           });
           const open_pulls = await github.paginate(promise)
-          console.log("paginated pulls: " + JSON.stringify(open_pulls));
 
           if ( open_pulls.length > 1 ) {
             for ( const pull of open_pulls ) {
-              console.log("pull title: " + pull.title);
-              if ( pull.title.startsWith("deps: update dependency") ) return;
+              if ( pull.title.startsWith("deps: update dependency") ) {
+                console.log( "Not auto-releasing yet since there are dependency update PRs open in this repo." );
+                return;
+              }
             }
           }
-
-          return; // do nothing
 
           // approve release PR
           await github.pulls.createReview({
