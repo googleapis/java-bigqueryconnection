@@ -9,50 +9,6 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          // only approve PRs from release-please[bot]
-          if (context.payload.sender.login != "release-please[bot]") {
-            return;
-          }
-
-          // only approve PRs like "chore: release <release version>"
-          if (!context.payload.pull_request.title.startsWith("chore: release")) {
-            return;
-          }
-
-          // trigger auto-release when
-          // 1) there are dependency updates only
-          // 2) there are no open dependency update PRs in this repo (to avoid multiple releases)
-          if (
-            context.payload.pull_request.body.includes("Fix") ||
-            context.payload.pull_request.body.includes("Build") ||
-            context.payload.pull_request.body.includes("BREAKING CHANGES") ||
-            context.payload.pull_request.body.includes("Features")
-          ) {
-            return;
-          }
-
-          // list all open pull requests
-          const result = github.pulls.list({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            state: 'open'
-          });
-
-          const pulls = await github.paginate(result);
-
-          // return if there are open depedency update PRs
-          if ( pulls !== 'undefined' ) {
-            for (const pull of pulls) {
-              if ( pull !== 'undefined') {
-                console.log(pull)
-                if (pull.title.startsWith("deps: update dependency ")) {
-                  return;
-                }
-              }
-            }
-          }
-
-          console.log("passed criteria check -- will autorelease")
           // approve release PR
           await github.pulls.createReview({
             owner: context.repo.owner,
