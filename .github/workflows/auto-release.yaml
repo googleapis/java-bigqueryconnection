@@ -9,8 +9,8 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          // only approve PRs from release-please[bot]
-          if (context.payload.sender.login != "release-please") {
+          // only approve PRs like "chore: release <release version>"
+          if (!context.payload.pull_request.title.startsWith("chore: release")) {
             return;
           }
 
