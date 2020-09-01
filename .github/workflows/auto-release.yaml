@@ -44,6 +44,7 @@ jobs:
           if ( pulls !== 'undefined' ) {
             for (const pull of pulls) {
               if ( pull !== 'undefined') {
+                console.log(pull)
                 if (pull.title.startsWith("deps: update dependency ")) {
                   return;
                 }
@@ -51,6 +52,7 @@ jobs:
             }
           }
 
+          console.log("passed criteria check -- will autorelease")
           // approve release PR
           await github.pulls.createReview({
             owner: context.repo.owner,
@@ -65,5 +67,5 @@ jobs:
             owner: context.repo.owner,
             repo: context.repo.repo,
             issue_number: context.payload.pull_request.number,
-            labels: ["kokoro:force-run", "automerge"]
+            labels: ['kokoro:force-run', 'automerge']
           });
