@@ -8,8 +8,6 @@ jobs:
     - uses: actions/github-script@v3.0.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
-        env:
-          ACTIONS_STEP_DEBUG: true
         script: |
           // only approve PRs from release-please[bot]
           if (context.payload.sender.login != "release-please[bot]") {
