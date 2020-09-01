@@ -10,16 +10,13 @@ jobs:
         github-token: ${{secrets.GITHUB_TOKEN}}
         debug: true
         script: |
-          // only approve PRs like "chore: release <release version>"
-          if ( !context.payload.pull_request.title.startsWith("chore: release") ) {
+          // only approve PRs from release-please[bot]
+          if (context.payload.pull_request.user.login !== "release-please[bot]") {
             return;
           }
 
-          console.log(context.payload.pull_request.user.login);
-          return;
-
-          // only approve PRs from release-please
-          if ( !context.payload.sender.login.includes("google") ) {
+          // only approve PRs like "chore: release <release version>"
+          if ( !context.payload.pull_request.title.startsWith("chore: release") ) {
             return;
           }
 
