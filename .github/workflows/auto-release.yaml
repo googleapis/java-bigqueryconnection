@@ -34,14 +34,13 @@ jobs:
           }
 
           // list all open pull requests
-          const open_pulls = github.pulls.list({
+          const promise = github.pulls.list({
             owner: context.repo.owner,
             repo: context.repo.repo,
             state: 'open'
           });
-          console.log("open pulls: " + open_pulls);
-          const paginated_pulls = await github.paginate(open_pulls)
-          console.log("paginated pulls: " + paginated_pulls);
+          const open_pulls = await github.paginate(promise)
+          console.log("paginated pulls: " + JSON. stringify(open_pulls));
           return;
 
 
