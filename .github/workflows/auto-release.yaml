@@ -43,8 +43,10 @@ jobs:
           // return if there are open depedency update PRs
           if ( pulls !== 'undefined' ) {
             for (const pull of pulls) {
-              if (pull.title.startsWith("deps: update dependency ")) {
-                return;
+              if ( pull !== 'undefined') {
+                if (pull.title.startsWith("deps: update dependency ")) {
+                  return;
+                }
               }
             }
           }
