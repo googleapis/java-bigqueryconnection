@@ -41,16 +41,12 @@ jobs:
 
           const pulls = await github.paginate(result);
 
-          if ( pulls === 'undefined' ) {
-            // continue if there are no open PRs in this repo
-            echo ("no open PRs");
-            continue;
-          } else {
+          if ( pulls !== 'undefined' ) {
             // return if there are open depedency update PRs
             for (const pull of pulls) {
               echo ( JSON.stringify(pull) );
               if (pull.title.startsWith("deps: update dependency ")) {
-                console.log( "No open dependency update pull requests in this repo" );
+                echo "No open dependency update pull requests in this repo";
                 return;
               }
             }
