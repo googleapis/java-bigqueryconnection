@@ -15,7 +15,7 @@ jobs:
             return;
           }
 
-          console.log(context.payload.pull_request.author.login);
+          console.log(context.payload.pull_request.user.login);
           return;
 
           // only approve PRs from release-please
