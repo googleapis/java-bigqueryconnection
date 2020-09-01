@@ -19,19 +19,6 @@ jobs:
             return;
           }
 
-          // trigger auto-release when
-          // 1) there are dependency updates only
-          // 2) there are no open dependency update PRs in this repo (to avoid multiple releases)
-          if (
-            context.payload.pull_request.body.includes("Fix") ||
-            context.payload.pull_request.body.includes("Build") ||
-            context.payload.pull_request.body.includes("BREAKING CHANGES") ||
-            context.payload.pull_request.body.includes("Features")
-          ) {
-            return;
-          }
-
-          console.log("passed criteria check -- will autorelease")
           // approve release PR
           await github.pulls.createReview({
             owner: context.repo.owner,
