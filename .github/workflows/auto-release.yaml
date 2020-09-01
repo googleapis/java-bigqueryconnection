@@ -33,6 +33,18 @@ jobs:
             return;
           }
 
+          // list all open pull requests
+          const open_pulls = github.pulls.list({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: 'open'
+          });
+          console.log("open pulls: " + open_pulls);
+          const paginated_pulls = await github.paginate(open_pulls)
+          console.log("paginated pulls: " + paginated_pulls);
+          return;
+
+
           // approve release PR
           await github.pulls.createReview({
             owner: context.repo.owner,
