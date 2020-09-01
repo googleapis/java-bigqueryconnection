@@ -46,6 +46,18 @@ jobs:
 
           const pulls = await github.paginate(result);
 
+          // debugging
+          if (pull === 'undefined') {
+            console.log( "pull is undefined" );
+          return;
+          }
+
+          if (pull.title === 'undefined') {
+            console.log( JSON.stringify(pull) );
+            console.log( "pull.title is undefined" );
+            return;
+          }
+
           // return if there are open depedency update PRs
           for (const pull of pulls) {
             if (pull.title.startsWith("deps: update dependency ")) {
