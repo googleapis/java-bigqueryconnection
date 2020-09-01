@@ -21,8 +21,9 @@ jobs:
           }
 
           // trigger auto-release when
-          // 1) there are dependency updates only
-          // 2) there are no open dependency update PRs in this repo (to avoid multiple releases)
+          // 1) it is a SNAPSHOT release (auto-generated post regular release)
+          // 2) there are dependency updates only
+          // 3) there are no open dependency update PRs in this repo (to avoid multiple releases)
           if (
             context.payload.pull_request.body.includes("Fix") ||
             context.payload.pull_request.body.includes("Build") ||
@@ -40,7 +41,7 @@ jobs:
           });
           const open_pulls = await github.paginate(promise)
 
-          if ( open_pulls.length > 1 ) {
+          if ( open_pulls.length > 1 && !context.payload.pull_request.title.includes("SNAPSHOT") ) {
             for ( const pull of open_pulls ) {
               if ( pull.title.startsWith("deps: update dependency") ) {
                 console.log( "Not auto-releasing yet since there are dependency update PRs open in this repo." );
