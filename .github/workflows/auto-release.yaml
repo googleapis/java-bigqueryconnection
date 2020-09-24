@@ -27,3 +27,5 @@ jobs:
             console.log( "PR file changes do not have pom.xml or versions.txt -- something is wrong. PTAL!" )
             return;
           }
+
+          console.log( "has both" )
