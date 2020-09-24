@@ -10,15 +10,20 @@ jobs:
         github-token: ${{secrets.YOSHI_APPROVER_TOKEN}}
         debug: true
         script: |
-          // only approve PRs from release-please[bot]
-          if (context.payload.pull_request.user.login !== "release-please[bot]") {
+          // only approve PRs with pom.xml and versions.txt changes
+          const filesPromise = github.pulls.listFiles.endpoint({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.payload.pull_request.number,
+          });
+          const changed_files = await github.paginate(filesPromise)
+
+          if ( changed_files.length < 1 ) {
+            console.log( "PR is empty!" )
             return;
           }
 
-          // only approve PRs like "chore: release <release version>"
-          if ( !context.payload.pull_request.title.startsWith("chore: release") ) {
-            return;
-          }
+          console.log( changed_files )
 
           // trigger auto-release when
           // 1) it is a SNAPSHOT release (auto-generated post regular release)
