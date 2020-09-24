@@ -10,16 +10,6 @@ jobs:
         github-token: ${{secrets.GITHUB_TOKEN}}
         debug: true
         script: |
-          // only approve PRs from release-please[bot]
-          if (context.payload.pull_request.user.login !== "release-please[bot]") {
-            return;
-          }
-
-          // only approve PRs like "chore: release <release version>"
-          if ( !context.payload.pull_request.title.startsWith("chore: release") ) {
-            return;
-          }
-
           // only approve PRs with pom.xml and versions.txt changes
           const filesPromise = github.pulls.listFiles.endpoint({
             owner: context.repo.owner,
