@@ -4,7 +4,6 @@ name: auto-release
 jobs:
   approve:
     runs-on: ubuntu-latest
-    if: contains(github.head_ref, 'release-v')
     steps:
     - uses: actions/github-script@v3.0.0
       with:
@@ -20,6 +19,20 @@ jobs:
           if ( !context.payload.pull_request.title.startsWith("chore: release") ) {
             return;
           }
+
+          // only approve PRs with pom.xml and versions.txt changes
+          const filesPromise = github.pulls.listFiles.endpoint({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.payload.pull_request.number,
+          });
+          const changed_files = await github.paginate(filesPromise)
+
+          if ( changed_files.length < 1 ) {
+            return;
+          }
+
+          console.log( changed_files )
 
           // trigger auto-release when
           // 1) it is a SNAPSHOT release (auto-generated post regular release)
