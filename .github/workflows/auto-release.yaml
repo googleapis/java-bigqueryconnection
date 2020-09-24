@@ -29,6 +29,7 @@ jobs:
           const changed_files = await github.paginate(filesPromise)
 
           if ( changed_files.length < 1 ) {
+            console.log( "PR is empty!" )
             return;
           }
 
