@@ -43,6 +43,9 @@ public class QuickstartSample {
               .build();
       ConnectionServiceClient.ListConnectionsPagedResponse response =
           connectionServiceClient.listConnections(request);
+
+      // Print the results.
+      System.out.println("List of connections:");
       response
           .iterateAll()
           .forEach(connection -> System.out.println("Connection Name: " + connection.getName()));

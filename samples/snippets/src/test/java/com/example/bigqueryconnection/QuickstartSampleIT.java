@@ -70,6 +70,6 @@ public class QuickstartSampleIT {
   @Test
   public void testQuickstart() throws IOException {
     QuickstartSample.listConnections(PROJECT_ID, "US");
-    assertThat(bout.toString()).contains("Connection Name");
+    assertThat(bout.toString()).contains("List of connections:");
   }
 }
