@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.3.5](https://www.github.com/googleapis/java-bigqueryconnection/compare/v0.3.4...v0.3.5) (2020-09-30)
+
+
+### Documentation
+
+* **samples:** add quick start ([#143](https://www.github.com/googleapis/java-bigqueryconnection/issues/143)) ([78bf38b](https://www.github.com/googleapis/java-bigqueryconnection/commit/78bf38bccc58765dc2dc4efb7864d07218bbd783))
+
 ### [0.3.4](https://www.github.com/googleapis/java-bigqueryconnection/compare/v0.3.3...v0.3.4) (2020-09-01)
 
 
