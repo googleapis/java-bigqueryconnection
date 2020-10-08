@@ -42,7 +42,7 @@ public class ShareConnection {
       ResourceName resource = ConnectionName.of(projectId, location, connectionId);
       Binding binding =
           Binding.newBuilder()
-              .addMembers("user:foo@example.com")
+              .addMembers("group:example-analyst-group@google.com")
               .setRole("roles/bigquery.connectionUser")
               .build();
       Policy policy = Policy.newBuilder().addBindings(binding).build();
