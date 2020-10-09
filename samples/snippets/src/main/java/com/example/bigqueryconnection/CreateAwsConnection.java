@@ -31,7 +31,7 @@ public class CreateAwsConnection {
   public static void main(String[] args) throws IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "MY_PROJECT_ID";
-    // Note: As of now location only support aws-us-east-1
+    // Note: As of now location only supports aws-us-east-1
     String location = "MY_LOCATION";
     String connectionId = "MY_CONNECTION_ID";
     // Example of role id arn:aws:iam::accountId:role/myrole
