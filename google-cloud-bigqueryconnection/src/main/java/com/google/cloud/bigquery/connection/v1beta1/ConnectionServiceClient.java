@@ -33,7 +33,6 @@ import com.google.protobuf.FieldMask;
 import com.google.protobuf.UInt32Value;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -161,7 +160,7 @@ public class ConnectionServiceClient implements BackgroundResource {
       LocationName parent, ConnectionProto.Connection connection, String connectionId) {
     ConnectionProto.CreateConnectionRequest request =
         ConnectionProto.CreateConnectionRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setConnection(connection)
             .setConnectionId(connectionId)
             .build();
@@ -223,7 +222,7 @@ public class ConnectionServiceClient implements BackgroundResource {
   public final ConnectionProto.Connection getConnection(ConnectionName name) {
     ConnectionProto.GetConnectionRequest request =
         ConnectionProto.GetConnectionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getConnection(request);
   }
@@ -278,7 +277,7 @@ public class ConnectionServiceClient implements BackgroundResource {
       LocationName parent, UInt32Value maxResults) {
     ConnectionProto.ListConnectionsRequest request =
         ConnectionProto.ListConnectionsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setMaxResults(maxResults)
             .build();
     return listConnections(request);
@@ -342,7 +341,7 @@ public class ConnectionServiceClient implements BackgroundResource {
       ConnectionName name, ConnectionProto.Connection connection, FieldMask updateMask) {
     ConnectionProto.UpdateConnectionRequest request =
         ConnectionProto.UpdateConnectionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setConnection(connection)
             .setUpdateMask(updateMask)
             .build();
@@ -449,7 +448,7 @@ public class ConnectionServiceClient implements BackgroundResource {
   public final void deleteConnection(ConnectionName name) {
     ConnectionProto.DeleteConnectionRequest request =
         ConnectionProto.DeleteConnectionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     deleteConnection(request);
   }
@@ -504,7 +503,7 @@ public class ConnectionServiceClient implements BackgroundResource {
   public final Policy getIamPolicy(ResourceName resource, GetPolicyOptions options) {
     GetIamPolicyRequest request =
         GetIamPolicyRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .setOptions(options)
             .build();
     return getIamPolicy(request);
@@ -566,7 +565,7 @@ public class ConnectionServiceClient implements BackgroundResource {
   public final Policy setIamPolicy(ResourceName resource, Policy policy) {
     SetIamPolicyRequest request =
         SetIamPolicyRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .setPolicy(policy)
             .build();
     return setIamPolicy(request);
@@ -636,7 +635,7 @@ public class ConnectionServiceClient implements BackgroundResource {
       ResourceName resource, List<String> permissions) {
     TestIamPermissionsRequest request =
         TestIamPermissionsRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .addAllPermissions(permissions)
             .build();
     return testIamPermissions(request);

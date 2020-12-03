@@ -59,7 +59,6 @@ import com.google.iam.v1.TestIamPermissionsResponse;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -152,7 +151,7 @@ public class ConnectionServiceStubSettings extends StubSettings<ConnectionServic
 
             @Override
             public Iterable<Connection> extractResources(ListConnectionsResponse payload) {
-              return Objects.isNull(payload.getConnectionsList())
+              return payload.getConnectionsList() == null
                   ? ImmutableList.<Connection>of()
                   : payload.getConnectionsList();
             }

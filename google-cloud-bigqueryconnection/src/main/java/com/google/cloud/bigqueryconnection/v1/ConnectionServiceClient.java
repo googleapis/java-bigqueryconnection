@@ -49,7 +49,6 @@ import com.google.protobuf.Empty;
 import com.google.protobuf.FieldMask;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -177,7 +176,7 @@ public class ConnectionServiceClient implements BackgroundResource {
       LocationName parent, Connection connection, String connectionId) {
     CreateConnectionRequest request =
         CreateConnectionRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setConnection(connection)
             .setConnectionId(connectionId)
             .build();
@@ -236,9 +235,7 @@ public class ConnectionServiceClient implements BackgroundResource {
    */
   public final Connection getConnection(ConnectionName name) {
     GetConnectionRequest request =
-        GetConnectionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetConnectionRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getConnection(request);
   }
 
@@ -287,7 +284,7 @@ public class ConnectionServiceClient implements BackgroundResource {
   public final ListConnectionsPagedResponse listConnections(LocationName parent) {
     ListConnectionsRequest request =
         ListConnectionsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listConnections(request);
   }
@@ -353,7 +350,7 @@ public class ConnectionServiceClient implements BackgroundResource {
       ConnectionName name, Connection connection, FieldMask updateMask) {
     UpdateConnectionRequest request =
         UpdateConnectionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setConnection(connection)
             .setUpdateMask(updateMask)
             .build();
@@ -415,9 +412,7 @@ public class ConnectionServiceClient implements BackgroundResource {
    */
   public final void deleteConnection(ConnectionName name) {
     DeleteConnectionRequest request =
-        DeleteConnectionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        DeleteConnectionRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     deleteConnection(request);
   }
 
@@ -469,7 +464,7 @@ public class ConnectionServiceClient implements BackgroundResource {
   public final Policy getIamPolicy(ResourceName resource, GetPolicyOptions options) {
     GetIamPolicyRequest request =
         GetIamPolicyRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .setOptions(options)
             .build();
     return getIamPolicy(request);
@@ -531,7 +526,7 @@ public class ConnectionServiceClient implements BackgroundResource {
   public final Policy setIamPolicy(ResourceName resource, Policy policy) {
     SetIamPolicyRequest request =
         SetIamPolicyRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .setPolicy(policy)
             .build();
     return setIamPolicy(request);
@@ -601,7 +596,7 @@ public class ConnectionServiceClient implements BackgroundResource {
       ResourceName resource, List<String> permissions) {
     TestIamPermissionsRequest request =
         TestIamPermissionsRequest.newBuilder()
-            .setResource(Objects.isNull(resource) ? null : resource.toString())
+            .setResource(resource == null ? null : resource.toString())
             .addAllPermissions(permissions)
             .build();
     return testIamPermissions(request);
