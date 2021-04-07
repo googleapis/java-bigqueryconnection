@@ -14,21 +14,8 @@
 
 """This script is used to synthesize generated parts of this library."""
 
-import synthtool as s
-import synthtool.gcp as gcp
 import synthtool.languages.java as java
 
-service = 'bigquery-connection'
-versions = ['v1beta1', 'v1']
-
-for version in versions:
-  java.bazel_library(
-      service=service,
-      version=version,
-      proto_path=f'google/cloud/bigquery/connection/{version}',
-      bazel_target=f'//google/cloud/bigquery/connection/{version}:google-cloud-{service}-{version}-java',
-      destination_name='bigqueryconnection',
-  )
 
 java.common_templates(excludes=[
     '.kokoro/build.sh',
