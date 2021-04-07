@@ -75,6 +75,26 @@
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
+        <artifactId>proto-google-cloud-bigquery-connection-v1</artifactId>
+        <version>1.0.14-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-bigquery-connection-v1:current} -->
+      </dependency>
+      <dependency>
+        <groupId>com.google.api.grpc</groupId>
+        <artifactId>proto-google-cloud-bigquery-connection-v1beta1</artifactId>
+        <version>1.0.14-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-bigquery-connection-v1beta1:current} -->
+      </dependency>
+      <dependency>
+        <groupId>com.google.api.grpc</groupId>
+        <artifactId>grpc-google-cloud-bigquery-connection-v1</artifactId>
+        <version>1.0.14-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-bigquery-connection-v1:current} -->
+      </dependency>
+      <dependency>
+        <groupId>com.google.api.grpc</groupId>
+        <artifactId>grpc-google-cloud-bigquery-connection-v1beta1</artifactId>
+        <version>1.0.14-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-bigquery-connection-v1beta1:current} -->
+      </dependency>
+      <dependency>
+        <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-cloud-bigqueryconnection-v1</artifactId>
         <version>1.0.14-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-bigqueryconnection-v1:current} -->
       </dependency>
@@ -140,10 +160,14 @@
 
   <modules>
     <module>google-cloud-bigqueryconnection</module>
-    <module>proto-google-cloud-bigqueryconnection-v1</module>
     <module>grpc-google-cloud-bigqueryconnection-v1</module>
-    <module>proto-google-cloud-bigqueryconnection-v1beta1</module>
     <module>grpc-google-cloud-bigqueryconnection-v1beta1</module>
+    <module>grpc-google-cloud-bigquery-connection-v1beta1</module>
+    <module>grpc-google-cloud-bigquery-connection-v1</module>
+    <module>proto-google-cloud-bigqueryconnection-v1</module>
+    <module>proto-google-cloud-bigqueryconnection-v1beta1</module>
+    <module>proto-google-cloud-bigquery-connection-v1beta1</module>
+    <module>proto-google-cloud-bigquery-connection-v1</module>
     <module>google-cloud-bigqueryconnection-bom</module>
   </modules>
 
