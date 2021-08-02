@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://www.github.com/googleapis/java-bigqueryconnection/compare/v1.2.0...v1.3.0) (2021-08-02)
+
+
+### Features
+
+* configure initial sp version ([#483](https://www.github.com/googleapis/java-bigqueryconnection/issues/483)) ([e121fa4](https://www.github.com/googleapis/java-bigqueryconnection/commit/e121fa4961c6764eea733bf743687b4cdfd89234))
+
 ## [1.2.0](https://www.github.com/googleapis/java-bigqueryconnection/compare/v1.1.5...v1.2.0) (2021-07-15)
 
 
