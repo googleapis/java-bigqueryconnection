@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.6](https://github.com/googleapis/java-bigqueryconnection/compare/v2.5.5...v2.5.6) (2022-10-05)
+
+
+### Bug Fixes
+
+* update protobuf to v3.21.7 ([3d6513f](https://github.com/googleapis/java-bigqueryconnection/commit/3d6513f7a22eb922fd6c967712956cccdd241546))
+
 ## [2.5.5](https://github.com/googleapis/java-bigqueryconnection/compare/v2.5.4...v2.5.5) (2022-10-03)
 
 
