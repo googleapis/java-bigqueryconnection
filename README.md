@@ -19,7 +19,7 @@ If you are using Maven, add this to your pom.xml file:
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-bigqueryconnection</artifactId>
-  <version>2.5.4</version>
+  <version>2.5.5</version>
 </dependency>
 
 ```
