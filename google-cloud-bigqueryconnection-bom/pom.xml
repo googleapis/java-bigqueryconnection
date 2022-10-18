@@ -62,7 +62,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-bigqueryconnection-v1beta1</artifactId>
-        <version>0.13.7-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-bigqueryconnection-v1beta1:current} -->
+        <version>0.14.0</version><!-- {x-version-update:grpc-google-cloud-bigqueryconnection-v1beta1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
