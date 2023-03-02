@@ -32,10 +32,10 @@ public class CreateAwsConnection {
   public static void main(String[] args) throws IOException {
     // TODO(developer): Replace these variables before running the sample.
     String projectId = "MY_PROJECT_ID";
-    // Note: As of now location only supports aws-us-east-1
+    // Example of location: aws-us-east-1
     String location = "MY_LOCATION";
     String connectionId = "MY_CONNECTION_ID";
-    // Example of role id arn:aws:iam::accountId:role/myrole
+    // Example of role id: arn:aws:iam::accountId:role/myrole
     String iamRoleId = "MY_AWS_ROLE_ID";
     AwsCrossAccountRole role = AwsCrossAccountRole.newBuilder().setIamRoleId(iamRoleId).build();
     AwsProperties awsProperties = AwsProperties.newBuilder().setCrossAccountRole(role).build();
