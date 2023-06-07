@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.7](https://github.com/googleapis/java-bigqueryconnection/compare/v2.5.6...v2.5.7) (2023-06-07)
+
+
+### Documentation
+
+* Update samples comment ([#838](https://github.com/googleapis/java-bigqueryconnection/issues/838)) ([5d6f3b7](https://github.com/googleapis/java-bigqueryconnection/commit/5d6f3b7eb2315bc144afe9ac48ef020e52d85dc7))
+
 ## [2.5.6](https://github.com/googleapis/java-bigqueryconnection/compare/v2.5.5...v2.5.6) (2022-10-05)
 
 
