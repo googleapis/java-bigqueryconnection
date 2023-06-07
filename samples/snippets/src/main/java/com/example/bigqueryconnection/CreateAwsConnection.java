@@ -18,7 +18,6 @@ package com.example.bigqueryconnection;
 
 // [START bigqueryconnection_create_aws_connection]
 import com.google.cloud.bigquery.connection.v1.AwsAccessRole;
-import com.google.cloud.bigquery.connection.v1.AwsCrossAccountRole;
 import com.google.cloud.bigquery.connection.v1.AwsProperties;
 import com.google.cloud.bigquery.connection.v1.Connection;
 import com.google.cloud.bigquery.connection.v1.CreateConnectionRequest;
@@ -37,8 +36,8 @@ public class CreateAwsConnection {
     String connectionId = "MY_CONNECTION_ID";
     // Example of role id: arn:aws:iam::accountId:role/myrole
     String iamRoleId = "MY_AWS_ROLE_ID";
-    AwsCrossAccountRole role = AwsCrossAccountRole.newBuilder().setIamRoleId(iamRoleId).build();
-    AwsProperties awsProperties = AwsProperties.newBuilder().setCrossAccountRole(role).build();
+    AwsAccessRole role = AwsAccessRole.newBuilder().setIamRoleId(iamRoleId).build();
+    AwsProperties awsProperties = AwsProperties.newBuilder().setAccessRole(role).build();
     Connection connection = Connection.newBuilder().setAws(awsProperties).build();
     createAwsConnection(projectId, location, connectionId, connection);
   }
